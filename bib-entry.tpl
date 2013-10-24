@@ -4,7 +4,7 @@
 	author = {{lb}}{{author}}{{rb}},
 	title = {{lb}}{{title}}{{rb}},
 	month = {{lb}}{{month}}{{rb}},
-	year = {{lb}}{{year}}{{rb}}
+	year = {{lb}}{{year}}{{rb}},
 	note = {{lb}}{{key}}{{rb}}
 }
 
