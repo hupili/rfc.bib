@@ -4,7 +4,8 @@ Output a `rfc.bib` readily for incorporation in your paper publications.
 
 ## Usage
 
-Download [rfc.bib]() and put in your paper directly.
+Download [rfc.bib](https://raw.github.com/hupili/rfc.bib/master/rfc.bib)
+and put in your paper directly.
 
 OR
 
