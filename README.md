@@ -6,3 +6,10 @@ Output a `rfc.bib` readily for incorporation in your paper publications.
 
    * RFC Editor: <http://www.rfc-editor.org/rfc.html> 
    * The XML index: ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml
+
+## Generate rfc.bib
+
+```
+./prepare.sh
+python rfc2bib.py > rfc.bib
+```
