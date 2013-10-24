@@ -74,5 +74,6 @@ for r in rfcs:
     d['author'] = normalize_authors(_a)
     d['year'] = r.find(tag_prefix('date')).find(tag_prefix('year')).text
     d['month'] = r.find(tag_prefix('date')).find(tag_prefix('month')).text
+    d['url'] = 'http://tools.ietf.org/rfc/%s.txt' % d['key'].lower()
     #d['obsoletes'] = ','.join([o.find('doc-id').text for o in r.findall(tag_prefix('obsoletes'))])
     print render_bib(d)

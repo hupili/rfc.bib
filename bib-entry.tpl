@@ -5,6 +5,7 @@
 	title = {{lb}}{{title}}{{rb}},
 	month = {{lb}}{{month}}{{rb}},
 	year = {{lb}}{{year}}{{rb}},
+	url = {{lb}}{{url}}{{rb}},
 	note = {{lb}}{{key}}{{rb}}
 }
 
