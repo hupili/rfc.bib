@@ -31,3 +31,7 @@ When you find the `rfc.bib` is obsolete, you can:
    * File an issue to notify me.
    * Run the above commands to generate the new `rfc.bib` yourself.
    Even better: fork -- generate -- send pull request!
+
+## License
+
+MIT
