@@ -39,8 +39,12 @@
 #        <wg_acronym>NON WORKING GROUP</wg_acronym>
 #    </rfc-entry>
 
+#URL_RFC_XML = 'ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml'
+URL_RFC_XML = 'http://www.rfc-editor.org/in-notes/rfc-index.xml'
+
 from lxml import etree
 import jinja2
+import requests
 
 def tag_prefix(s):
     return '{http://www.rfc-editor.org/rfc-index}' + s
@@ -60,7 +64,7 @@ template = jinja2.Template(open('bib-entry.tpl').read())
 def render_bib(data):
     return template.render(data)
 
-index = etree.fromstring(open('rfc-index.xml').read())
+index = etree.fromstring(requests.get(URL_RFC_XML).content)
 rfcs = index.findall(tag_prefix('rfc-entry'))
 
 #for r in rfcs[0:30]:

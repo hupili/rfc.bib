@@ -11,15 +11,18 @@ OR
 
 Generate `rfc.bib` yourself:
 
-```
-./prepare.sh
-python rfc2bib.py > rfc.bib
-```
+   * Install dependencies: `[sudo] pip install -r requirements.txt`
+   * Generate: `python rfc2bib.py > rfc.bib`
+
+The script download XML version of RFC from the website.
+It may take some time to finish.
 
 ## Resources
 
-   * RFC Editor: <http://www.rfc-editor.org/rfc.html> 
-   * The XML index: ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml
+   * RFC Editor: <http://www.rfc-editor.org/rfc.html>
+   * The XML index:
+   [ftp](ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml)
+   [http](http://www.rfc-editor.org/in-notes/rfc-index.xml)
 
 ## Why Yet Another?
 
@@ -30,7 +33,7 @@ When you find the `rfc.bib` is obsolete, you can:
 
    * File an issue to notify me.
    * Run the above commands to generate the new `rfc.bib` yourself.
-   Even better: fork -- generate -- send pull request!
+   * Even better: fork -- generate -- send pull request!
 
 ## License
 
