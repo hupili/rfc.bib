@@ -6,12 +6,12 @@ import requests
 
 BIB_ENTRY_FORMAT = """\
 @MISC{%(key)s,
-	author = {%(author)s},
-	title = {%(title)s},
-	month = {%(month)s},
-	year = {%(year)s},
-	url = {%(url)s},
-	note = {%(key)s}
+  title = {{%(title)s}},
+  author = {%(author)s},
+  month = %(month)s,
+  year = %(year)s,
+  url = {%(url)s},
+  note = {%(key)s}
 }
 """
 
@@ -39,7 +39,7 @@ for r in rfcs:
         _a += [a.find(tag_prefix('name')).text]
     d['author'] = normalize_authors(_a)
     d['year'] = r.find(tag_prefix('date')).find(tag_prefix('year')).text
-    d['month'] = r.find(tag_prefix('date')).find(tag_prefix('month')).text
+    d['month'] = r.find(tag_prefix('date')).find(tag_prefix('month')).text[:3].lower()
     d['url'] = 'http://tools.ietf.org/rfc/%s.txt' % d['key'].lower()
     #d['obsoletes'] = ','.join([o.find('doc-id').text for o in r.findall(tag_prefix('obsoletes'))])
     print(BIB_ENTRY_FORMAT % d)
