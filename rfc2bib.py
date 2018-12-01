@@ -1,5 +1,3 @@
-#-*-coding:utf-8-*-
-
 #URL_RFC_XML = 'ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml'
 URL_RFC_XML = 'http://www.rfc-editor.org/in-notes/rfc-index.xml'
 
@@ -14,9 +12,9 @@ def normalize_authors(authors):
     # INPUT: a list of authors
     # OUTPUT: bib normalized authors
     # https://github.com/hupili/utility/blob/master/latex/tex-bib-author.py
-    authors = filter(lambda a: a != u'', map(lambda a: unicode.strip(a.decode('utf-8')), authors))
-    authors_reversed = map(lambda a: a.split()[-1] + u', ' + u' '.join(a.split()[0:-1]), authors)
-    return unicode(u' and '.join(authors_reversed))
+    authors = filter(lambda a: a != '', map(lambda a: a.strip(), authors))
+    authors_reversed = map(lambda a: a.split()[-1] + ', ' + ' '.join(a.split()[0:-1]), authors)
+    return ' and '.join(authors_reversed)
 
 # ref: https://raw.github.com/hupili/tutorial/master/README.tpl.md
 #      https://github.com/hupili/tutorial/blob/master/render_readme.py
@@ -41,4 +39,4 @@ for r in rfcs:
     d['month'] = r.find(tag_prefix('date')).find(tag_prefix('month')).text
     d['url'] = 'http://tools.ietf.org/rfc/%s.txt' % d['key'].lower()
     #d['obsoletes'] = ','.join([o.find('doc-id').text for o in r.findall(tag_prefix('obsoletes'))])
-    print render_bib(d)
+    print(render_bib(d))
