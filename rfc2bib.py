@@ -5,9 +5,11 @@ from lxml import etree
 import requests
 
 BIB_ENTRY_FORMAT = """\
-@MISC{%(key)s,
+@techreport{%(key)s,
   title = {{%(title)s}},
   author = {%(author)s},
+  type = {RFC},
+  institution = {IETF},
   month = %(month)s,
   year = %(year)s,
   url = {%(url)s},
