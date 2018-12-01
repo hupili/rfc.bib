@@ -1,44 +1,5 @@
 #-*-coding:utf-8-*-
 
-# One sample entry
-#>>> print lxml.etree.tostring(r)
-#<rfc-entry xmlns="http://www.rfc-editor.org/rfc-index" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-#        <doc-id>RFC6918</doc-id>
-#        <title>Formally Deprecating Some ICMPv4 Message Types</title>
-#        <author>
-#            <name>F. Gont</name>
-#        </author>
-#        <author>
-#            <name>C. Pignataro</name>
-#        </author>
-#        <date>
-#            <month>April</month>
-#            <year>2013</year>
-#        </date>
-#        <format>
-#            <file-format>ASCII</file-format>
-#            <char-count>13639</char-count>
-#            <page-count>8</page-count>
-#        </format>
-#        <keywords>
-#            <kw>IANA</kw>
-#            <kw>IPv4 Options</kw>
-#        </keywords>
-#        <abstract><p>A number of ICMPv4 message types have become obsolete in practice, but have never been formally deprecated.  This document deprecates such ICMPv4 message types, thus cleaning up the corresponding IANA registry.  Additionally, it updates RFC 792 and RFC 950, obsoletes RFC 1788, and requests the RFC Editor to change the status of RFC 1788 to Historic.</p></abstract>
-#        <draft>draft-gp-obsolete-icmp-types-iana-01</draft>
-#        <obsoletes>
-#            <doc-id>RFC1788</doc-id>
-#        </obsoletes>
-#        <updates>
-#            <doc-id>RFC0792</doc-id>
-#            <doc-id>RFC0950</doc-id>
-#        </updates>
-#        <current-status>PROPOSED STANDARD</current-status>
-#        <publication-status>PROPOSED STANDARD</publication-status>
-#        <stream>IETF</stream>
-#        <wg_acronym>NON WORKING GROUP</wg_acronym>
-#    </rfc-entry>
-
 #URL_RFC_XML = 'ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml'
 URL_RFC_XML = 'http://www.rfc-editor.org/in-notes/rfc-index.xml'
 
