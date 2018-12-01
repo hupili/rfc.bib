@@ -9,11 +9,11 @@ BIB_ENTRY_FORMAT = """\
   title = {{%(title)s}},
   author = {%(author)s},
   type = {RFC},
+  number = {%(number)s},
   institution = {IETF},
   month = %(month)s,
   year = %(year)s,
   url = {%(url)s},
-  note = {%(key)s}
 }
 """
 
@@ -35,6 +35,7 @@ rfcs = index.findall(tag_prefix('rfc-entry'))
 for r in rfcs:
     d = {}
     d['key'] = r.find(tag_prefix('doc-id')).text
+    d['number'] = int(d['key'][3:])
     d['title'] = r.find(tag_prefix('title')).text
     _a = []
     for a in r.findall(tag_prefix('author')):
