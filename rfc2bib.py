@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 #URL_RFC_XML = 'ftp://ftp.rfc-editor.org/in-notes/rfc-index.xml'
-URL_RFC_XML = 'http://www.rfc-editor.org/in-notes/rfc-index.xml'
+URL_RFC_XML = 'https://www.rfc-editor.org/in-notes/rfc-index.xml'
 
 from lxml import etree
 import requests
@@ -18,7 +19,7 @@ BIB_ENTRY_FORMAT = """\
 """
 
 def tag_prefix(s):
-    return '{http://www.rfc-editor.org/rfc-index}' + s
+    return '{https://www.rfc-editor.org/rfc-index}' + s
 
 def normalize_authors(authors):
     # INPUT: a list of authors
