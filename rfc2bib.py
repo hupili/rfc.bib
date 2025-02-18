@@ -44,6 +44,6 @@ for r in rfcs:
     d['author'] = normalize_authors(_a)
     d['year'] = r.find(tag_prefix('date')).find(tag_prefix('year')).text
     d['month'] = r.find(tag_prefix('date')).find(tag_prefix('month')).text[:3].lower()
-    d['url'] = 'http://tools.ietf.org/rfc/%s.txt' % d['key'].lower()
+    d['url'] = 'https://www.rfc-editor.org/rfc/rfc%s.txt' % d['number']
     #d['obsoletes'] = ','.join([o.find('doc-id').text for o in r.findall(tag_prefix('obsoletes'))])
     print(BIB_ENTRY_FORMAT % d)
